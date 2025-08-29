@@ -9,6 +9,183 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles.css">
+	<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Arial", sans-serif;
+    }
+
+    body {
+      background: #00d084;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Main Product Layout */
+    .product {
+      display: flex;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* Left Column - Product Photo */
+    .product__photo {
+      flex: 1;
+      background: linear-gradient(to bottom, #c6f5a7, #a8e57e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .photo-container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .photo-main {
+      position: relative;
+      background: #c6f5a7;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .photo-main img {
+      width: 280px;
+    }
+
+    .controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+    }
+
+    .controls i {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .photo-album {
+      margin-top: 15px;
+    }
+
+    .photo-album ul {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .photo-album img {
+      width: 50px;
+      border: 2px solid #eee;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      background: #fff;
+    }
+
+    .photo-album img:hover {
+      border-color: #00c853;
+    }
+
+    /* Right Column - Product Info */
+    .product__info {
+      flex: 1;
+      padding: 40px 30px;
+    }
+
+    .title h1 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .title span {
+      display: block;
+      font-size: 14px;
+      color: #999;
+      margin-top: 5px;
+    }
+
+    .price {
+      margin: 20px 0;
+      font-size: 30px;
+      font-weight: bold;
+      color: #e53935;
+    }
+
+    .variant h3 {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .variant ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .variant img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .variant img:hover {
+      border-color: #e53935;
+    }
+
+    .description {
+      margin-top: 25px;
+    }
+
+    .description h3 {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .description ul {
+      list-style: disc;
+      padding-left: 20px;
+      color: #444;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Add to Cart Button */
+    .add-to-cart {
+      margin-top: 25px;
+      background: #e53935;
+      color: #fff;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background: #c62828;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,8 +220,9 @@
 				<span>CODE: 45999</span>
 			</div>
 			<div class="price">
-				R$ <span>7.93</span>
-			</div>
+            $ <span>7.93</span>
+               </div>
+
 			<div class="variant">
 				<h3>SELECT A COLOR</h3>
 				<ul>
@@ -59,8 +237,16 @@
 				</ul>
 			</div>
 			<div class="description">
+				 <h3>BENEFITS</h3>
+        <ul>
+          <li>Apples are nutritious</li>
+          <li>Apples may be good for weight loss</li>
+          <li>Apples may be good for bone health</li>
+          <li>They’re linked to a lowest risk of diabetes</li>
+        </ul>
 				
 			</div>
+			 <button class="add-to-cart">ADD TO CART</button>
 		</div>
 	</section>
 </body>
